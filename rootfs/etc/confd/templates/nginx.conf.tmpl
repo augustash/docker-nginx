@@ -1,0 +1,15 @@
+user ash ash;
+worker_processes {{ getenv "NGINX_WORKER_PROCESSES" }};
+daemon off;
+
+events {
+    worker_connections {{ getenv "NGINX_WORKER_CONNECTIONS" }};
+}
+
+http {
+    # service configuration
+    include /config/nginx/conf.d/*.conf;
+
+    # include active sites
+    include /config/nginx/hosts.d/*.conf;
+}

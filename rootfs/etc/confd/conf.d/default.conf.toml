@@ -1,0 +1,10 @@
+[template]
+# Conifguration template
+src     = "default.conf.tmpl"
+# Rendered configuration file location
+dest    = "/config/nginx/hosts.d/default.conf"
+
+# File ownership
+owner   = "ash"
+group   = "ash"
+mode    = "0644"

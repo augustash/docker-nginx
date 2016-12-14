@@ -1,0 +1,14 @@
+version: "2"
+services:
+  web:
+    build:
+      context: .
+    image: augustash/nginx:1.10
+    labels:
+      - "com.augustash.description=August Ash Nginx Image"
+      - "com.augustash.development-only"
+    ports:
+      - "8080:80"
+      - "8443:443"
+    environment:
+      - NGINX_VIRTUAL_HOST=_

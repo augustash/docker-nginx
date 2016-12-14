@@ -1,0 +1,8 @@
+server {
+    listen 80 default;
+    listen 443 ssl;
+    server_name {{ getenv "NGINX_VIRTUAL_HOST" }};
+
+    root /src;
+    index index.html index.htm;
+}
